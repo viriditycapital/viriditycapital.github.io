@@ -1,3 +1,48 @@
 /**
  * Compiles all the styles together
  */
+
+$VIRIDITY_COLOR_LIGHT: #03ac13;
+$VIRIDITY_COLOR_MEDIUM: #028a0f;
+$VIRIDITY_COLOR_DARK: #466d1d;
+
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  #stripe-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(30deg);
+
+    .stripe {
+      width: 45vw;
+      height: 200vh;
+
+      &#left {
+        background-color: $VIRIDITY_COLOR_LIGHT;
+      }
+
+      &#mid {
+        background-color: $VIRIDITY_COLOR_MEDIUM;
+      }
+
+      &#right {
+        background-color: $VIRIDITY_COLOR_DARK;
+      }
+    }
+  }
+}
