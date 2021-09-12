@@ -7,7 +7,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./public/index.html"
+      template: "./public/index.html",
+      favicon: "./src/assets/viridity_icon.png",
     }),
   ],
   output: {
