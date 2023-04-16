@@ -1,0 +1,45 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: white;
+  background-color: black;
+
+  .company-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  } 
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .logo {
+      height: 30px;
+      margin: 4px 8px;
+      transition-duration: 500ms;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .toolbar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    a {
+      color: white;
+      padding: 8px;
+    }
+  }
+}
