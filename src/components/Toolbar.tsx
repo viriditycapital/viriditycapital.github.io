@@ -1,5 +1,6 @@
 import React from "react";
 import logo_viridity from "../assets/viridity_icon.png";
+import { Link } from "react-router-dom";
 
 class Toolbar extends React.Component {
   render() {
@@ -14,18 +15,18 @@ class Toolbar extends React.Component {
       </div>
 
       <div className="toolbar-links">
-        <a className="link">
+        <Link className="link" to="/contracting">
           Contracting                    
-        </a>
-        <a className="link">
+        </Link>
+        <Link className="link" to="/investors">
           Investors
-        </a>
-        <a className="link">
+        </Link>
+        <Link className="link" to="/careers">
           Careers
-        </a>
-        <a className="link">
+        </Link>
+        <Link className="link" to="/about">
           About Us                    
-        </a>
+        </Link>
       </div>
     </div>;
   }

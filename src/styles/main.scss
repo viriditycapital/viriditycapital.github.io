@@ -78,3 +78,9 @@ body {
     }
   }
 }
+
+.page {
+  .main-content {
+    margin-top: $toolbar-height;
+  }
+}
