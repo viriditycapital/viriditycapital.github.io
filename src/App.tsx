@@ -1,5 +1,5 @@
 import React from "react";
-import Toolbar from "./components/Toolbar";
+import Toolbar from "./components/TopToolbar";
 import PageBanner from "./components/PageBanner";
 import lunargala from "./assets/lunargala.jpg";
 

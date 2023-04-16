@@ -1,5 +1,5 @@
 import React from "react";
-import Toolbar from "../components/Toolbar";
+import Toolbar from "../components/TopToolbar";
 
 class Contracting extends React.Component {
   render() {
