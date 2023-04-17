@@ -9,9 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Contracting', 'Investors', 'Careers', 'About'];
 
 function TopToolbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -33,12 +33,9 @@ function TopToolbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" id="toolbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <div>
-            logo here
-          </div>
           <Typography
             variant="h6"
             noWrap
@@ -49,12 +46,11 @@ function TopToolbar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            VIRIDITY CAPITAL
+            VIRIDITY CAPITAL LLC
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -88,14 +84,13 @@ function TopToolbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link to={`/${page.toLowerCase()}`}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <div>
-            logo
-          </div>
           <Typography
             variant="h5"
             noWrap
@@ -116,13 +111,15 @@ function TopToolbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+              <Link to={`/${page.toLowerCase()}`}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>

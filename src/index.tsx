@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
+import CssBaseline from '@mui/material/CssBaseline';
 import App from './App';
 import {
   createBrowserRouter,
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
 
 ReactDOM.render(
   <React.StrictMode>
+    <CssBaseline />
     <RouterProvider router={router} />
   </React.StrictMode>,
   document.getElementById('root')
