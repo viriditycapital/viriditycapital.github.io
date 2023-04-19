@@ -11,7 +11,7 @@ import Contracting from './pages/Contracting';
 import Careers from './pages/Careers';
 import About from './pages/About';
 import Investors from './pages/Investors';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material';
 
 /**
  * TODO: We should eventually have it so that the toolbar persists, instead of
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const theme = createTheme({
+let theme = createTheme({
   typography: {
     fontFamily: [
       'Open Sans',
@@ -49,6 +49,7 @@ const theme = createTheme({
     ].join(','),
   },
 });
+theme = responsiveFontSizes(theme);
 
 ReactDOM.render(
   <React.StrictMode>
