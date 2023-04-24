@@ -2,6 +2,8 @@ import React from "react";
 import Toolbar from "../components/TopToolbar";
 import { Box, Grid } from "@mui/material";
 import lunargala from '../assets/lunargala.jpg';
+import future from '../assets/future.jpg';
+import ml_pic from '../assets/ml.jpg';
 
 class Contracting extends React.Component {
   render() {
@@ -12,9 +14,6 @@ class Contracting extends React.Component {
           <h1>Doing Business with Viridity Capital</h1>
           <p>
             We provide the best technology solutions at the most affordable rates.
-          </p>
-
-          <p>
             Get in Touch With Us Today.
           </p>
           <Grid container spacing={2}>
@@ -30,18 +29,26 @@ class Contracting extends React.Component {
                 />
               </a>
             </Grid>
-            <Grid item xs={6}>
-              Machine Learning
+            <Grid item xs={6} display={"flex"} alignItems={"center"}>
+              Machine Learning, Neural Networks, Statistical Modeling, Stable
+              Diffusion
             </Grid>
             <Grid item xs={6} display={"flex"} alignItems={"center"}>
-              (ML Picture)
+                <img
+                  src={future}
+                  alt="Futuristic City"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
             </Grid>
             <Grid item xs={6} display={"flex"} alignItems={"center"}>
-              Computer Systems
-              OS, Compilers, Distributed Systems
+              Computer Systems, Operating Systems, Compilers, Distributed Systems
             </Grid>
             <Grid item xs={6}>
-              (Tech picture)
+                <img
+                  src={ml_pic}
+                  alt="Machine Learning"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
             </Grid>
           </Grid>
         </Grid>
